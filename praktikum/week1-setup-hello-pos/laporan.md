@@ -125,20 +125,20 @@ Paradigma fungsional membantu menulis kode yang lebih ringkas dan bebas dari efe
 Dengan memahami tiga paradigma ini, mahasiswa dapat memilih pendekatan yang paling sesuai untuk setiap jenis proyek.
 
 ## Quiz
-Apakah OOP selalu lebih baik dari prosedural?
+1.Apakah OOP selalu lebih baik dari prosedural?
 Jawaban: Tidak selalu. Untuk program kecil, paradigma prosedural bisa lebih sederhana dan efisien. OOP lebih unggul jika proyek berskala besar atau kompleks.
 
-Kapan functional programming lebih cocok digunakan dibanding OOP atau prosedural?
+2.Kapan functional programming lebih cocok digunakan dibanding OOP atau prosedural?
 Jawaban: Ketika kita ingin memproses data besar secara paralel, menghindari efek samping, dan menulis kode singkat menggunakan fungsi murni atau lambda expression.
 
-Bagaimana paradigma (prosedural, OOP, fungsional) memengaruhi maintainability dan scalability aplikasi?
+3.Bagaimana paradigma (prosedural, OOP, fungsional) memengaruhi maintainability dan scalability aplikasi?
 Jawaban:
 Prosedural: sulit di-maintain jika program membesar.
 OOP: mudah dikembangkan karena modular.
 Fungsional: mudah diuji dan minim bug karena tidak ada perubahan data langsung.
 
-Mengapa OOP lebih cocok untuk mengembangkan aplikasi POS dibanding prosedural?
+4.Mengapa OOP lebih cocok untuk mengembangkan aplikasi POS dibanding prosedural?
 Jawaban: Karena OOP bisa memodelkan entitas nyata seperti Produk dan Transaksi sebagai objek, sehingga kode lebih mudah dipahami dan dikembangkan.
 
-Bagaimana paradigma fungsional dapat membantu mengurangi kode berulang (boilerplate code)?
+5.Bagaimana paradigma fungsional dapat membantu mengurangi kode berulang (boilerplate code)?
 Jawaban: Dengan menggunakan fungsi lambda dan stream API, banyak operasi data dapat ditulis hanya dalam satu baris tanpa membuat loop atau variabel tambahan.
