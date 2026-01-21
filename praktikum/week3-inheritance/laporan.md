@@ -89,7 +89,8 @@ public class Produk {
 }
 
 ## Hasil Eksekusi
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/0c0bc9d8-4080-4b60-9c08-281d4440b66e" />
+<img width="1920" height="1080" alt="Screenshot 2026-01-21 120224" src="https://github.com/user-attachments/assets/bcf15230-aab0-47a4-8e28-58a80cfaa829" />
+
 
 
 ## Analisis
