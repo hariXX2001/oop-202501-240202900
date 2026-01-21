@@ -64,7 +64,7 @@ public class MainPolymorphism {
 ---
 
 ## Hasil Eksekusi
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/dff0167d-d9b4-40de-94aa-e497f93b73be" />
+<img width="1920" height="1080" alt="Screenshot 2026-01-21 120224" src="https://github.com/user-attachments/assets/f5e108d3-42f4-41eb-b3ee-630df3e8a66c" />
 
 ---
 
