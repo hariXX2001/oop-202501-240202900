@@ -30,7 +30,7 @@ Mahasiswa mampu memahami dan menerapkan desain arsitektur sistem menggunakan UML
 ---
 
 ## Kode Program
-digraph UseCaseAgriPOS {
+digraph SequenceAgriPOS {
     rankdir=LR;
     node [shape=box, style=rounded];
     
