@@ -70,11 +70,8 @@ Penerapan pola MVC membuat kode lebih bersih dan profesional. Penggunaan kata ku
 ---
 
 ## Quiz
-(1. [Tuliskan kembali pertanyaan 1 dari panduan]  
-   **Jawaban:** …  
+1. Apa fungsi Controller dalam MVC?
+   Jawaban: Controller bertindak sebagai jembatan yang mengatur aliran data dari Model ke View dan sebaliknya.
 
-2. [Tuliskan kembali pertanyaan 2 dari panduan]  
-   **Jawaban:** …  
-
-3. [Tuliskan kembali pertanyaan 3 dari panduan]  
-   **Jawaban:** …  )
+2. Mengapa variabel di Model diset private?
+   Jawaban: Untuk keamanan data (enkapsulasi), sehingga data hanya bisa diubah atau dibaca melalui metode yang diizinkan (getter/setter).
