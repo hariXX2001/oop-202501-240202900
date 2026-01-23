@@ -1,65 +1,72 @@
-# Laporan Praktikum Minggu 1 (sesuaikan minggu ke berapa?)
-Topik: [Tuliskan judul topik, misalnya "Class dan Object"]
+# Laporan Praktikum Minggu 10
+Topik: pattern-testing
 
 ## Identitas
-- Nama  : [Nama Mahasiswa]
-- NIM   : [NIM Mahasiswa]
-- Kelas : [Kelas]
+- Nama  : Hari cahyono
+- NIM   : 240202900
+- Kelas : 3 IKKA
 
 ---
 
 ## Tujuan
-(Tuliskan tujuan praktikum minggu ini.  
-Contoh: *Mahasiswa memahami konsep class dan object serta dapat membuat class Produk dengan enkapsulasi.*)
-
+Mahasiswa mampu mengimplementasikan pola arsitektur MVC (Model-View-Controller) sederhana, memahami fungsi masing-masing komponen, serta menerapkan prinsip enkapsulasi menggunakan getter dan kata kunci this pada Java.
 ---
 
 ## Dasar Teori
-(Tuliskan ringkasan teori singkat (3–5 poin) yang mendasari praktikum.  
-Contoh:  
-1. Class adalah blueprint dari objek.  
-2. Object adalah instansiasi dari class.  
-3. Enkapsulasi digunakan untuk menyembunyikan data.)
-
+1. MVC Pattern: Memisahkan logika data (Model), tampilan (View), dan penghubung keduanya (Controller) agar kode lebih terorganisir.
+2. Enkapsulasi: Melindungi data dengan akses private dan menyediakan akses melalui metode public (getter).
+3. Keyword this: Digunakan untuk merujuk pada variabel instance saat terjadi shadowing (nama parameter sama dengan nama variabel class).
+4. Instansiasi: Proses pembuatan objek dari blueprint (class) agar bisa digunakan di memori.
 ---
 
 ## Langkah Praktikum
-(Tuliskan Langkah-langkah dalam prakrikum, contoh:
-1. Langkah-langkah yang dilakukan (setup, coding, run).  
-2. File/kode yang dibuat.  
-3. Commit message yang digunakan.)
-
+1. Membuat struktur package yang rapi: model, view, dan controller.
+2. Menyusun class Product sebagai Model untuk menyimpan data kode dan nama produk.
+3. Membuat class ConsoleView untuk menangani logika output ke layar.
+4. Menghubungkan Model dan View melalui class ProductController.
+5. Mengeksekusi seluruh logika melalui AppMVC.java sebagai entry point.
+6. Melakukan debugging pada kesalahan inisialisasi variabel dan getter.
 ---
 
 ## Kode Program
-(Tuliskan kode utama yang dibuat, contoh:  
+// File: Product.java (Model)
+public class Product {
+    private String code;
+    private String name;
 
-```java
-// Contoh
-Produk p1 = new Produk("BNH-001", "Benih Padi", 25000, 100);
-System.out.println(p1.getNama());
-```
-)
+    public Product(String code, String name) {
+        this.code = code; // Menggunakan 'this' agar data tersimpan
+        this.name = name;
+    }
+
+    public String getCode() { return code; }
+    public String getName() { return name; }
+}
+
+// File: AppMVC.java (Main)
+public static void main(String[] args) {
+    Product product = new Product("P01", "Pupuk Organik");
+    ConsoleView view = new ConsoleView();
+    ProductController controller = new ProductController(product, view);
+    controller.showProduct();
+}
 ---
 
 ## Hasil Eksekusi
-(Sertakan screenshot hasil eksekusi program.  
-![Screenshot hasil](screenshots/hasil.png)
-)
+<img width="1920" height="1080" alt="Screenshot 2026-01-23 170047" src="https://github.com/user-attachments/assets/139be8d8-11e3-4f07-8b79-3436786315e7" />
+
 ---
 
 ## Analisis
-(
-- Jelaskan bagaimana kode berjalan.  
-- Apa perbedaan pendekatan minggu ini dibanding minggu sebelumnya.  
-- Kendala yang dihadapi dan cara mengatasinya.  
-)
+1. Cara Kerja Kode: AppMVC membuat objek data (Product) dan tampilan (View). Keduanya dimasukkan ke Controller. Saat showProduct() dipanggil, Controller mengambil data dari Product lewat getter lalu mengirimnya ke View untuk dicetak.
+2. Perbedaan: Minggu ini kode jauh lebih modular. Data tidak langsung dicetak di kelas utama, melainkan dipisah sesuai fungsinya (MVC), mempermudah pengembangan ke depan.
+3. Kendala & Solusi:
+   3.1 NullPointerException: Terjadi karena lupa menginisialisasi variabel di constructor Controller. Solusi: Menambahkan this.variable = parameter.
+   3.2 Output Null: Terjadi karena shadowing di class Product dan getter yang mengembalikan null. Solusi: Menggunakan kata kunci this di constructor dan memperbaiki return value pada getter.
 ---
 
 ## Kesimpulan
-(Tuliskan kesimpulan dari praktikum minggu ini.  
-Contoh: *Dengan menggunakan class dan object, program menjadi lebih terstruktur dan mudah dikembangkan.*)
-
+Penerapan pola MVC membuat kode lebih bersih dan profesional. Penggunaan kata kunci this sangat krusial dalam Java untuk memastikan data dari parameter constructor benar-benar masuk ke dalam variabel objek, sehingga data tidak bernilai null saat diakses.
 ---
 
 ## Quiz
